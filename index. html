@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Movie Rating App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Movie Rating App</h1>
+      <p>Add movies and rate them (1–5 stars). Ratings are saved in your browser.</p>
+    </header>
+
+    <section class="add-movie">
+      <input id="movieTitle" type="text" placeholder="Enter movie title" />
+      <button id="addBtn">Add Movie</button>
+    </section>
+
+    <section id="moviesList" class="movies-list">
+      <!-- Movie cards will be injected here -->
+    </section>
+  </div>
+
+  <template id="movieTemplate">
+    <div class="movie-card">
+      <div class="movie-header">
+        <h2 class="movie-title"></h2>
+        <div class="controls">
+          <button class="edit-btn" title="Edit title">✎</button>
+          <button class="delete-btn" title="Delete movie">🗑</button>
+        </div>
+      </div>
+
+      <div class="rating-row">
+        <div class="stars" aria-label="Rate this movie">
+          <!-- star buttons injected here -->
+        </div>
+        <div class="rating-info">
+          <span class="avg">Avg: <strong class="avg-val">0</strong></span>
+          <span class="count">(<strong class="count-val">0</strong> ratings)</span>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
